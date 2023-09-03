@@ -3,13 +3,13 @@ import {MdPerson as icon} from 'react-icons/md'
 
 export default defineType({
   name: 'person',
-  title: 'Person',
+  title: 'Persoon',
   type: 'document',
   icon,
   fields: [
     defineField({
       name: 'name',
-      title: 'Name',
+      title: 'Naam',
       type: 'string',
       description: 'Please use "Firstname Lastname" format',
     }),

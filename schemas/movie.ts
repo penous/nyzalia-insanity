@@ -2,14 +2,14 @@ import {defineField, defineType} from 'sanity'
 import {MdLocalMovies as icon} from 'react-icons/md'
 
 export default defineType({
-  name: 'movie',
-  title: 'Movie',
+  name: 'performance',
+  title: 'Voorstelling',
   type: 'document',
   icon,
   fields: [
     defineField({
       name: 'title',
-      title: 'Title',
+      title: 'Titel',
       type: 'string',
     }),
     defineField({
@@ -23,12 +23,12 @@ export default defineType({
     }),
     defineField({
       name: 'overview',
-      title: 'Overview',
+      title: 'SamenVatting',
       type: 'blockContent',
     }),
     defineField({
       name: 'releaseDate',
-      title: 'Release date',
+      title: 'Start Datum',
       type: 'datetime',
     }),
     defineField({
@@ -51,13 +51,13 @@ export default defineType({
     }),
     defineField({
       name: 'castMembers',
-      title: 'Cast Members',
+      title: 'Regie',
       type: 'array',
       of: [{type: 'castMember'}],
     }),
     defineField({
       name: 'crewMembers',
-      title: 'Crew Members',
+      title: 'Acteurs',
       type: 'array',
       of: [{type: 'crewMember'}],
     }),

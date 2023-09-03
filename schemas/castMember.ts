@@ -2,17 +2,12 @@ import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'castMember',
-  title: 'Cast Member',
+  title: 'Acteur',
   type: 'object',
   fields: [
     defineField({
-      name: 'characterName',
-      title: 'Character Name',
-      type: 'string',
-    }),
-    defineField({
       name: 'person',
-      title: 'Actor',
+      title: 'Acteur',
       type: 'reference',
       to: [{type: 'person'}],
     }),
