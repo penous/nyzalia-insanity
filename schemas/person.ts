@@ -11,7 +11,7 @@ export default defineType({
       name: 'name',
       title: 'Naam',
       type: 'string',
-      description: 'Please use "Firstname Lastname" format',
+      description: 'voornaam + achternaam',
     }),
     defineField({
       name: 'slug',
