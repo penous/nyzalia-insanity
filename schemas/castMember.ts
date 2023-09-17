@@ -10,16 +10,11 @@ export default defineType({
       title: 'Acteur',
       type: 'reference',
       to: [{type: 'person'}],
-    }),
-    defineField({
-      name: 'externalId',
-      title: 'External ID',
-      type: 'number',
-    }),
-    defineField({
-      name: 'externalCreditId',
-      title: 'External Credit ID',
-      type: 'string',
+      options: {
+        filter: 'role[0] == $role',
+        filterParams: {role: 'acteur'},
+        disableNew: true,
+      },
     }),
   ],
   preview: {

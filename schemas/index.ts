@@ -1,14 +1,14 @@
 import blockContent from './blockContent'
 import crewMember from './crewMember'
 import castMember from './castMember'
-import movie from './movie'
+import performance from './performance'
 import person from './person'
 import plotSummary from './plotSummary'
 import plotSummaries from './plotSummaries'
 
 export const schemaTypes = [
   // Document types
-  movie,
+  performance,
   person,
 
   // Other types

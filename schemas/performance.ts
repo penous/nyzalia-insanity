@@ -13,6 +13,17 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'unreleased',
+      title: 'Opkomende voorstelling?',
+      type: 'boolean',
+    }),
+    defineField({
+      name: 'price',
+      title: 'Ticket prijs',
+      type: 'number',
+      hidden: ({document}) => document?.unreleased == false,
+    }),
+    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -40,24 +51,14 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'externalId',
-      title: 'External ID',
-      type: 'number',
-    }),
-    defineField({
-      name: 'popularity',
-      title: 'Popularity',
-      type: 'number',
-    }),
-    defineField({
       name: 'castMembers',
-      title: 'Regie',
+      title: 'Acteurs',
       type: 'array',
       of: [{type: 'castMember'}],
     }),
     defineField({
       name: 'crewMembers',
-      title: 'Acteurs',
+      title: 'Regie',
       type: 'array',
       of: [{type: 'crewMember'}],
     }),

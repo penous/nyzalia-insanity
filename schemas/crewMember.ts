@@ -7,11 +7,6 @@ export default defineType({
   type: 'object',
   fields: [
     defineField({
-      name: 'department',
-      title: 'Department',
-      type: 'string',
-    }),
-    defineField({
       name: 'job',
       title: 'Job',
       type: 'string',
@@ -21,30 +16,24 @@ export default defineType({
       title: 'Person',
       type: 'reference',
       to: [{type: 'person'}],
-    }),
-    defineField({
-      name: 'externalId',
-      title: 'External ID',
-      type: 'number',
-    }),
-    defineField({
-      name: 'externalCreditId',
-      title: 'External Credit ID',
-      type: 'string',
+      options: {
+        filter: 'role[0] == $role',
+        filterParams: {role: 'regie'},
+        disableNew: true,
+      },
     }),
   ],
   preview: {
     select: {
       name: 'person.name',
       job: 'job',
-      department: 'department',
       media: 'person.image',
     },
     prepare(selection) {
-      const {name, job, department, media} = selection
+      const {name, job, media} = selection
       return {
         title: name,
-        subtitle: `${job} [${department}]`,
+        subtitle: `${job}`,
         media,
       }
     },

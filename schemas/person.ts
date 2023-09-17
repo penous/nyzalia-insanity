@@ -23,6 +23,19 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'role',
+      title: 'functie',
+      description: 'acteur / regie',
+      type: 'array',
+      of: [{type: 'string'}],
+      options: {
+        list: [
+          {title: 'Acteur', value: 'acteur'},
+          {title: 'Regie', value: 'regie'},
+        ],
+      },
+    }),
+    defineField({
       name: 'image',
       title: 'Image',
       type: 'image',
