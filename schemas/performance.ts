@@ -16,12 +16,13 @@ export default defineType({
       name: 'unreleased',
       title: 'Opkomende voorstelling?',
       type: 'boolean',
+      initialValue: false,
     }),
     defineField({
       name: 'price',
       title: 'Ticket prijs',
       type: 'number',
-      hidden: ({document}) => document?.unreleased == false,
+      hidden: ({document}) => !document?.unreleased,
     }),
     defineField({
       name: 'slug',
@@ -61,6 +62,12 @@ export default defineType({
       title: 'Regie',
       type: 'array',
       of: [{type: 'crewMember'}],
+    }),
+    defineField({
+      name: 'imageGallery',
+      title: "Foto's",
+      type: 'array',
+      of: [{type: 'image'}],
     }),
   ],
   preview: {
