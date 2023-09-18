@@ -9,7 +9,7 @@ export default defineConfig({
   title: 'Nyzalia',
 
   projectId: 'mxnfue20',
-  dataset: 'production',
+  dataset: 'develop',
 
   plugins: [
     deskTool(),

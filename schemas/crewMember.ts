@@ -7,11 +7,6 @@ export default defineType({
   type: 'object',
   fields: [
     defineField({
-      name: 'job',
-      title: 'Job',
-      type: 'string',
-    }),
-    defineField({
       name: 'person',
       title: 'Person',
       type: 'reference',
@@ -21,6 +16,11 @@ export default defineType({
         filterParams: {role: 'regie'},
         disableNew: true,
       },
+    }),
+    defineField({
+      name: 'job',
+      title: 'Job',
+      type: 'string',
     }),
   ],
   preview: {
