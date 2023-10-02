@@ -70,6 +70,18 @@ export default defineType({
       of: [{type: 'image'}],
     }),
   ],
+  orderings: [
+    {
+      title: 'Release Date, New',
+      name: 'releaseDateDesc',
+      by: [{field: 'releaseDate', direction: 'desc'}],
+    },
+    {
+      title: 'Release Date, Old',
+      name: 'releaseDateAsc',
+      by: [{field: 'releaseDate', direction: 'asc'}],
+    },
+  ],
   preview: {
     select: {
       title: 'title',
