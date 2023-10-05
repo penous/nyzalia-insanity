@@ -64,6 +64,12 @@ export default defineType({
       of: [{type: 'crewMember'}],
     }),
     defineField({
+      name: 'assistantMembers',
+      title: 'Assistenten',
+      type: 'array',
+      of: [{type: 'assistantMember'}],
+    }),
+    defineField({
       name: 'imageGallery',
       title: "Foto's",
       type: 'array',

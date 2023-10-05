@@ -1,6 +1,7 @@
 import blockContent from './blockContent'
 import crewMember from './crewMember'
 import castMember from './castMember'
+import assistantMember from './assistantMember'
 import performance from './performance'
 import person from './person'
 import plotSummary from './plotSummary'
@@ -17,4 +18,5 @@ export const schemaTypes = [
   plotSummaries,
   castMember,
   crewMember,
+  assistantMember,
 ]
