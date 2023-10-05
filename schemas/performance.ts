@@ -80,6 +80,9 @@ export default defineType({
       title: "Foto's",
       type: 'array',
       of: [{type: 'image'}],
+      options: {
+        layout: 'grid',
+      },
     }),
   ],
   orderings: [
