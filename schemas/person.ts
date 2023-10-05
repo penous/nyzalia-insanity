@@ -33,6 +33,7 @@ export default defineType({
           {title: 'Acteur', value: 'acteur'},
           {title: 'Regie', value: 'regie'},
           {title: 'Assistent', value: 'assistent'},
+          {title: 'Auteur', value: 'auteur'},
         ],
       },
     }),

@@ -70,6 +70,12 @@ export default defineType({
       of: [{type: 'assistantMember'}],
     }),
     defineField({
+      name: 'authorMembers',
+      title: 'Auteurs',
+      type: 'array',
+      of: [{type: 'authorMember'}],
+    }),
+    defineField({
       name: 'imageGallery',
       title: "Foto's",
       type: 'array',
