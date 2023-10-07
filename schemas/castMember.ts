@@ -11,7 +11,7 @@ export default defineType({
       type: 'reference',
       to: [{type: 'person'}],
       options: {
-        filter: 'role[0] == $role',
+        filter: '$role in role[]',
         filterParams: {role: 'acteur'},
         disableNew: true,
       },
